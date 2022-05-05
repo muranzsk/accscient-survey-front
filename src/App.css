@@ -1,0 +1,217 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*FOOTER CSS*/
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+/*Radio Buttons Style*/
+.wrapper{
+  display: inline-flex;
+  background: #fff;
+  height: 75px;
+  width: 300px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  padding: 20px 15px;
+  box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+}
+
+.wrapper .option{
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 10px;
+  border: 2px solid lightgrey;
+  transition: all 0.3s ease;
+}
+
+.wrapper .option .dot{
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+}
+
+.wrapper .option .dot::before{
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: #0069d9;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+
+input[type="radio"]{
+  display: none;
+}
+
+.option-1:checked:checked ~ .option-1,
+.option-2:checked:checked ~ .option-2{
+  border-color: #0069d9;
+  background: #0069d9;
+}
+
+.option-1:checked:checked ~ .option-1 .dot,
+.option-2:checked:checked ~ .option-2 .dot{
+  background: #fff;
+}
+
+.option-1:checked:checked ~ .option-1 .dot::before,
+.option-2:checked:checked ~ .option-2 .dot::before{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.wrapper .option span{
+  font-size: 15px;
+  color: #808080;
+}
+
+.option-1:checked:checked ~ .option-1 span,
+.option-2:checked:checked ~ .option-2 span{
+  color: #fff;
+}
+/*Upload Button CSS*/
+.custom-upload {
+  background-color: #0069d9;
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+/*TABLE CSS*/
+.table-container {
+  height: 23em;
+  overflow-y:scroll;
+}
+
+.no-space {
+  overflow: hidden;
+  white-space: nowrap;
+}
+/*PIE Chart DIV*/
+.pieChartDiv {
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  height: 200%;
+  width: 100%;
+  align-content: center;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.forSpace {
+  margin: 5%;
+}
+
+/*MODAL CSS*/
+.modal-akagi {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-main {
+  position:fixed;
+  background: white;
+  width: 30%;
+  height: auto;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.modal-body p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  letter-spacing: 0;
+}
+/*CSS MAGIC TRICKS*/
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.container{
+  padding-bottom: 50px;
+}
+/*LOGO CSS*/
+.img-logo{
+  height: 50px;
+}
+
+/*Update Record Component*/
+.comment-p {
+  font-style: normal; 
+  font-size: 14px;
+  font-family: sans-serif; 
+  text-align: left;
+  letter-spacing:0em;
+}
